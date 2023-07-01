@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-color: pink;
+}
+
+.interactivearea {
+    margin-right: 130px;
+}
+
+.mainlinks {
+    border: 2px solid black;
+    display: inline-block;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.memebutton {
+    background-color: palevioletred;
+    display: inline-block;
+    padding: 0px 10px;
+    border: 2px solid purple;
+    position: absolute;
+
+}
+
