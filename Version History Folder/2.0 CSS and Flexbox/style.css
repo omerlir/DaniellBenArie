@@ -144,11 +144,6 @@ body {
     border: 2px solid rgb(226, 226, 209);
 } 
 
-.main-card button:active {
-    border: 2px solid #E8A0BF ;
-    color: #E8A0BF;
-    transition-duration: 0s;
-}
 
 .footer {
     border-radius: 25px 25px 0px 0px;

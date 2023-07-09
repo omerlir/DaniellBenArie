@@ -24,7 +24,6 @@ body {
     border-radius: 0px 0px 225px 225px;
 } 
 @media (max-height: 500px) {.header {height:20vh;} }
-
 .header > .logo {
     font-family: 'Amatic SC', cursive;
     font-size: 50px ;
@@ -54,7 +53,7 @@ body {
     box-shadow: 8px 8px 5px rgba(168, 88, 128, 0.4);
 }
 
-@media (max-width: 950px){ 
+@media (max-width: 950px) { 
     .main{
       flex-wrap: wrap;
       justify-content: start;
@@ -144,11 +143,6 @@ body {
     border: 2px solid rgb(226, 226, 209);
 } 
 
-.main-card button:active {
-    border: 2px solid #E8A0BF ;
-    color: #E8A0BF;
-    transition-duration: 0s;
-}
 
 .footer {
     border-radius: 25px 25px 0px 0px;
@@ -210,7 +204,7 @@ body {
     }
 }
 
-@media (min-width:590px) {
+@media (min-width:591px) {
     .header .logo {
         margin-left: 15%;
         margin-bottom: 45px;
