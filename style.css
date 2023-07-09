@@ -1,25 +1,227 @@
+
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /* check back if this is relevant*/
     text-align: center;
     background-color: pink;
 }
 
-.interactivearea {
-    margin-right: 130px;
+.header {
+    box-sizing: border-box;
+    height: 10vh;
+    background-color: #E8A0BF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 15px rgba(60, 15, 66, 0.4);
+    border-radius: 0px 0px 225px 225px;
+} 
+@media (max-height: 500px) {.header {height:20vh;} }
+
+.header > .logo {
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px ;
+
 }
 
-.mainlinks {
-    border: 2px solid black;
-    display: inline-block;
-    margin-right: 30px;
-    text-align: left;
+
+.header > .icons a img {
+    width: 40px;
+    height: 40px;   
 }
 
-.memebutton {
-    background-color: palevioletred;
-    display: inline-block;
-    padding: 0px 10px;
-    border: 2px solid purple;
-    position: absolute;
+.main {
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    width: 100vw;
+    flex-direction: row
+}
+
+.main > .main-card {
+    border-radius: 20px;
+    max-width: 700px;
+    background-color: #FF869E95;
+    box-shadow: 8px 8px 5px rgba(168, 88, 128, 0.4);
+}
+
+@media (max-width: 950px){ 
+    .main{
+      flex-wrap: wrap;
+      justify-content: start;
+}
+    .main .main-card{
+        max-width: 420px;
+    }
+    .main .left {
+        margin:15px 40px 4vh 40px ;
+    }
+    .main .right {
+        margin:4vh 5vw 15px auto ;
+    }
+    .footer .quote {
+        margin: 0 3vh 4vh 0;
+    }
 
 }
 
+@media (min-width: 951px){
+    .main .left {
+    margin:15px 40px 25vh 40px ;
+}
+
+    .main .right {
+    margin:25vh 40px 15px 40px ;
+}
+    .footer .quote {
+    margin: 0 8vh 4vh 0;
+}
+}
+
+.main-image img{
+    border-radius: 8%;
+    float: left;
+    padding: 1em;
+    height: 450px;
+}
+
+@media (max-width:1140px) {
+    .main-image img {
+    float: none;
+} 
+}
+
+.main-text .title {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.main-text p {
+    text-align: justify;
+    padding: 0 1em;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 9px;
+}
+
+.main-card button {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 130px;   
+    height: 50px;
+    background-color: #E8A0BF;
+    border-radius: 15px;
+    transition-duration: 0.15s;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: max-content;
+    padding: 0 20px;
+    color: black;
+    border-color: black;
+}
+
+@media (max-width:1500px) {
+    .main-card button{margin-top: 0; margin-right: 0px;}
+}
+
+.main-card button:hover {
+    background-color: #c02669;
+    color: rgb(226, 226, 209);
+    border: 2px solid rgb(226, 226, 209);
+} 
+
+.main-card button:active {
+    border: 2px solid #E8A0BF ;
+    color: #E8A0BF;
+    transition-duration: 0s;
+}
+
+.footer {
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E8A0BF;
+    box-shadow: 0 5px 40px 6px rgba(71, 5, 80, 0.4);
+
+}
+
+.footer .quote {
+    font-size: 45px;
+    font-family: 'Loved by the King', cursive;
+}
+@media (max-width:720px) {
+    .footer .quote {
+        font-size: 33px;
+    }
+}
+
+.footer .history {
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@media (max-width:590px) { /*Phone Display*/
+    .header {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        
+    }
+    .header > .logo {
+        margin: 0;
+    }
+    .main-text p{
+        font-size: 1em;
+        width: 250px;
+    }
+    .main .main-image img {
+        height: 300px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer .quote {
+        margin: 0;
+    }
+    .footer .history {
+        margin: 0 0 0.8vh 0;
+        font-size: 23px;
+    }
+}
+
+@media (min-width:590px) {
+    .header .logo {
+        margin-left: 15%;
+        margin-bottom: 45px;
+    }
+    .header > .icons {
+        margin-right: 12%;
+    }
+    .main-card {
+        min-width: 420px;
+    }
+    .footer .history {
+        margin: 5vh 0 0 2vh;
+    }
+}
